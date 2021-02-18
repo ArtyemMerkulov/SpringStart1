@@ -15,7 +15,7 @@ public class ProductRepository {
     @SuppressWarnings("unchecked")
     public List<Product> findAll() {
         EntityManager em = emFactory.createEntityManager();
-        return em.createNamedQuery("allProducts")
+        return em.createNamedQuery("allProducts", Product.class))
                 .getResultList();
     }
 
